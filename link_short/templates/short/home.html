@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block title %}LinkShort{% endblock %}
+
+{% block one %}link{% endblock %}
+{% block two %}n{% endblock %}
+{% block three %}n{% endblock %}
+{% block four %}n{% endblock %}
+{% block five %}n{% endblock %}
+{% block six %}n{% endblock %}
+{% block seven %}n{% endblock %}
+
+{% block main %}
+  <span id="icon">
+    <i class="fa-solid fa-arrow-right"></i>
+  </span>
+  <div id="hidden-menu">
+    <span class="close">
+      <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+    </span>
+    <img id="img-love" src="pictures/love.png" alt="IloveYou">
+    <ul>
+      <li><a href="#"><i id="youtube" class="fa-brands fa-youtube menu-icons"></i><p class="menu-str">YouTube</p></a></li>
+      <li><a href="#"><i id="telegram" class="fa-brands fa-telegram menu-icons"></i><p class="menu-str">Telegram</p></a></li>
+      <li><a href="#"><i id="tiktok" class="fa-brands fa-tiktok menu-icons"></i><p class="menu-str">TikTok</p></a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h1 id="main-title">LinkShort</h1>
+    <hr id="hr-main">
+    <h4>Лучший сервис по сокращению ссылок</h4>
+    {% if not user.is_authenticated %}
+      <button class="home-button" onclick="window.location.href = '{% url 'reg' %}'">Попробовать</button>
+    {% else %}
+      <button class="home-button" onclick="window.location.href = '{% url 'add' %}'">Попробовать</button>
+    {% endif %}
+  </div>
+{% endblock %}

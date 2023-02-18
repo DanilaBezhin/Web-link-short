@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block one %}n{% endblock %}
+{% block two %}n{% endblock %}
+{% block three %}n{% endblock %}
+{% block four %}link{% endblock %}
+{% block five %}n{% endblock %}
+{% block six %}n{% endblock %}
+{% block seven %}n{% endblock %}
+
+{% block main %}
+  <div class="main main-register">
+    <h1 id="">Регистрация</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+  </div>
+{% endblock %}

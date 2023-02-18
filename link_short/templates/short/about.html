@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}О нас{% endblock %}
+
+{% block one %}n{% endblock %}
+{% block two %}link{% endblock %}
+{% block three %}n{% endblock %}
+{% block four %}n{% endblock %}
+{% block five %}n{% endblock %}
+{% block six %}n{% endblock %}
+{% block seven %}n{% endblock %}
+
+{% block main %}
+  <div class="about-main-block">
+    <div class="block-about">
+      <span>
+        <h3 id="about-prem">Наши преимущества:</h3>
+          <p class="block-about-p"><img class="img-about" src="pictures/about(1).png" align="middle"> Удобный интерфейс</p>
+          <p class="block-about-p"><img class="img-about" src="pictures/about(2).png" align="middle"> Скорость работы</p>
+          <p class="block-about-p end-block-about-p"><img class="img-about" src="pictures/about(3).png" align="middle"> Поддержка 24/7</p>
+      </span>
+    </div>
+    <div class="block-link">
+      <h3>Все ссылки:</h3>
+      {% for el in link %}
+      <div class="block-link-one">
+        <h5>▪️ {{ el.title }}</h5>
+        <p>👉🏻 <a class="link-about" target="_blank" href="{{ el.start_link }}">{{ el.late_link }}</a></p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

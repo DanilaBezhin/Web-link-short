@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}Авторизация{% endblock %}
+
+{% block one %}n{% endblock %}
+{% block two %}n{% endblock %}
+{% block three %}link{% endblock %}
+{% block four %}n{% endblock %}
+{% block five %}n{% endblock %}
+{% block six %}n{% endblock %}
+{% block seven %}n{% endblock %}
+
+{% block main %}
+  <div class="main main-register enter">
+    <h1 id="">Авторизация</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Войти</button>
+    </form>
+  </div>
+{% endblock %}

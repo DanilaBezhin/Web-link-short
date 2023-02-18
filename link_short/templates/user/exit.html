@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}Выход{% endblock %}
+
+{% block one %}n{% endblock %}
+{% block two %}n{% endblock %}
+{% block three %}n{% endblock %}
+{% block four %}n{% endblock %}
+{% block five %}link{% endblock %}
+{% block six %}n{% endblock %}
+{% block seven %}n{% endblock %}
+
+{% block main %}
+  <div class="main exit">
+    <h1>Вы успешно вышли с аккаунта</h1>
+    <p>Желаете снова <a href="{% url 'user' %}">войти?</a></p>
+  </div>
+{% endblock %}

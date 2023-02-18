@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #12122a;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+a {
+    font-weight: 600;
+    color: hsl(80, 70%, 55%);
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+
+.log_2 {
+    margin-left: 1.6vw;
+    text-shadow: 2px 2px 4px #467500;
+    font-size: 3vh;
+}
+
+.log_2:hover {
+    color: #DAF7A6;
+}
+
+.logotype {
+    font-size: 5vh;
+    font-weight: 600;
+}
+
+.stickers {
+    font-size: 7vh;
+    font-weight: 600;
+    margin-right: 10vw;
+}
+
+.logotype:hover {
+    color: #DAF7A6;
+}
+
+@media (min-width: 900px) {
+    .stickers {
+         pointer-events: none;
+    }
+}
+
+
+
+.header {
+    background: #0d0d1e; /*linear-gradient(to bottom, #1f1f32 50%, #0d0d1e 0%);*/
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #D0EAA9;
+}
+
+.main {
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: hsl(80, 70%, 55%);
+}
+
+.main hr {
+    width: 25vh;
+}
+
+.main h1 {
+    font-size: 5vh;
+}
+
+.main h4 {
+    padding-top: 3vh;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.main button {
+    border: none;
+    margin-top: 3vh;
+    font-size: 3vh;
+    background: linear-gradient(9deg, #75f579, #a0cea7, #ffca34);
+    padding: 1.5vh 2vh;
+    border-radius: 2vh;
+    transition: 0.3s;
+}
+
+.home-button:hover {
+    cursor: pointer;
+    animation: 2s ease-in-out 0s normal none infinite running trambling-animation;
+}
+
+@keyframes trambling-animation {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    10%, 30% {
+        transform: rotate(-2deg);
+    }
+    20%, 40% {
+        transform: rotate(2deg);
+    }
+}
+
+.footer {
+    color: hsl(80, 70%, 55%);
+    background: #12122a;
+    font-size: 2vh;
+    position: fixed;
+    left: 1%;
+    bottom: 1%;
+}
+
+.link {
+   text-decoration: underline;
+   pointer-events: none; /* делаем элемент неактивным для взаимодействия */
+   cursor: default; /*  курсор в виде стрелки */
+   color: #ffca34;;
+}
+
+
+
+
+#icon {
+    font-size: 6vh;
+    color: #b1fcb1;
+    position: absolute;
+    margin-top: 20vh;
+    transition: 0.3s;
+    animation-duration: 3s;
+    animation-name: slid;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slid {
+      0% {
+        left: 0.9vw;
+      }
+      25% {
+        left: 2vw;
+      }
+      50% {
+        left: 0.9vw;
+      }
+      75% {
+        left: 2vw;
+      }
+      100% {
+        left: 0.9vw;
+      }
+    }
+
+#icon:hover {
+    transform: scale(1.2);
+}
+
+.fa-solid:hover {
+    cursor: pointer;
+    color: #e9ffc9;
+}
+
+#hidden-menu {
+    margin-top: 20vh;
+    width: 20vh;
+    position: fixed;
+    left: -40vh;
+    height: 50vh;
+    background: linear-gradient(to top left, #37a73f, #ffd100);;
+    z-index: 10;
+    border-radius: 0vh 2vh 2vh 0vh;
+}
+
+#hidden-menu .close {
+    font-size: 3vh;
+    margin-left: 1vh;
+    cursor: pointer;
+    transition: color 600ms ease;
+}
+
+#hidden-menu .close i {
+    position: relative;
+    top: 1vh;
+}
+
+#hidden-menu .close:hover {
+    color: #FFB83C
+}
+
+#img-love {
+    width: 17vh;
+    position: relative;
+    left: 1vh;
+    top: 4vh;
+    padding-bottom: 2vh;
+}
+
+.menu-icons {
+    position: relative;
+    left: 1.2vh;
+    top: 5vh;
+    transition: 0.3s;
+}
+
+.menu-icons,
+.menu-str:hover {
+    color: #ffca34;
+    transform: scale(1.2);
+}
+
+
+#hidden-menu ul {
+    list-style: none;
+}
+
+#hidden-menu ul li {
+    display: block;
+    margin-bottom: 1.5vh;
+    margin-left: 0.3vh;
+}
+
+.menu-str {
+    position: relative;
+    left: 5.5vh;
+    width: 10vh;
+    top: 2vh;
+    transition: 0.3s;
+}
+
+#hidden-menu ul li a {
+    color: #333;
+    font-size: 2.5vh;
+    text-shadow: none;
+}
+#hidden-menu ul li a:hover {color: hsl(80, 70%, 55%);}
+
+
+/* -----------------------------------------------------------------------------------*/
+
+
+.block-link {
+    width: 30%;
+    height: 1vh;
+    background: linear-gradient(to top left, #37a73f, #ffd100);
+    overflow: auto;
+    font-size: 1.5vw;
+    align-items: start;
+    padding: 0.7em 1.2em;
+    border-radius: 1em 0 0 1em;
+    float: right;
+    margin-right: 4vw;
+}
+
+.link-about {
+    color: #3680cd;
+}
+
+.link-about:hover {
+    color: #36aacd;
+}
+
+.block-link-one h5 {
+    margin-top: 4.5vh;
+}
+
+.block-link-one p {
+    border-color: #21b743;
+    font-weight: 600;
+    vertical-align: top;
+}
+
+.about-main-block {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6vh;
+}
+
+.block-about {
+    float: left;
+    color: hsl(80, 70%, 55%);
+    width: 40%;
+    height: 60vh;
+    padding: 0.7em 1.2em;
+    font-weight: 600;
+    margin-left: 4vw;
+}
+
+.img-about {
+    width: 7vw;
+    border: .2vw solid #f5e8ac;
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+.img-about:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+
+.block-about h3 {
+    font-size: 2.4vw;
+    margin-bottom: 2vh;
+    color: #ffca34;
+}
+
+.block-about-p {
+    color: #141414;
+    margin-bottom: 1vw;
+    background: linear-gradient(to top left, #26a52f, #ffd100);
+    border-radius: 10vw;
+    height: 7.4vw;
+    border: 0.1vw solid #f5e8ac;
+}
+
+.stickers2 {
+    display: none;
+}
+
+
+
+/*----------------regist---------------------------------*/
+
+
+
+.main-register {
+    margin-top: 20vh;
+}
+
+.errorlist {
+    font-size: 2vh;
+}
+
+.main-register form {
+    font-size: 3vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-register h1{
+    margin-bottom: 2vw;
+    opacity: .1;
+}
+
+.main-register button {
+    font-size: 3vh;
+    margin-top: 4vh;
+    transition: 0.4s;
+    background: linear-gradient(9deg, #75f579, #a0cea7, #ffca34);
+    padding: 0.5vh 2vh
+}
+.main-register button:hover {
+    animation: 1s;
+    background: linear-gradient(184deg, #75f579, #a0cea7, #ffca34);
+    cursor: pointer;
+}
+
+.main-register form input {
+    font-size: 2vh;
+    background: #e9ffc9;
+    padding: 0.7vh;
+    border-radius: 10px;
+}
+
+.main-register > form > p > span {
+    font-size: 1vw;
+}
+
+#mess {
+    color: #ffca34;
+    position: absolute;
+    left: 1vw;
+    top: 11vh;
+    text-shadow: 1px 1.5px #39d73e;
+    border: 1px solid #6f8671;
+    padding: 0.5em 1.1em;
+    background: #223546;
+    border-radius: 0.5em;
+}
+
+
+/* ---------------------ВХОД------------------------------------- */
+
+
+.enter {
+    width: 24vw;
+    margin-left: 38vw;
+}
+
+.enter form input {
+    width: 100%;
+}
+.enter button {
+    width: 105%
+}
+
+
+/* ------------------ВЫХОД-------------------- */
+
+
+
+.exit h1 {
+    margin: 1vw;
+}
+
+.exit p {
+    font-size: 2vw;
+}
+
+.exit p a {
+    color: #ffca34;
+    transition: 0.4s;
+}
+.exit p a:hover {
+    color: #b1fcb1;
+}
+
+/*-------------Профиль-------------------*/
+
+
+.profile {
+    margin-top: 10vh;
+    margin-bottom: 4vh;
+}
+
+.profile h1 {
+    font-size: 2.5vw;
+    opacity: 0.1;
+}
+
+.profile p {
+    font-size: 1.5vw;
+}
+
+.block-link-author{
+    width: 26%;
+    height: 5vh;
+    background: linear-gradient(to top left, #26a52f, #ffd100);
+    overflow: auto;
+    align-items: start;
+    padding: 1em 2em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vh;
+    font-size: 1.8vw;
+    float: right;
+    margin-right: 16vw;
+}
+
+#link-profile {
+    color: #ffd400;
+    text-decoration: underline #ffd400;
+}
+
+#link-profile:hover {
+    color: #000000;
+    text-decoration: underline #000000;
+}
+
+.update_user {
+    float: left;
+    margin-top: 4vh;
+    margin-left: 16vw;
+    width: 26%;
+    background: linear-gradient(to top left, #26a52f, #ffd100);
+    padding: 1em 2em;
+    border-radius: 1em;
+    font-size: 1.8vw;
+    height: 5vh;
+}
+
+.update_user input {
+    font-size: 0.7em;
+    padding: 0.5em 0.9em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    border: none;
+}
+
+.update_user button {
+    font-size: 0.9em;
+    padding: 0.5em 0.9em;
+    margin-bottom: 1em;
+    border-radius: 0.4em;
+    border: none;
+    background: linear-gradient(183deg, #75f579, #beb100, #ffca34);
+    margin-top: 0.4em;
+    transition: 0.3s;
+}
+
+.update_user button:hover {
+    cursor: pointer;
+    background: linear-gradient(360deg, #75f579, #beb100, #ffca34);
+}
+
+.update_user h3 {
+    margin-bottom: 5vh;
+}
+
+.update_user form {
+    opacity: 0;
+}
+
+
+
+/*-------------------СОЗДАНИЕ-------------------------------*/
+
+
+.main-create {
+    width: 30vw;
+    margin-left: 35vw;
+    font-size: 1.6vw;
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.main-create h1 {
+    font-size: 3vw;
+    margin-bottom: 4vh;
+    opacity: 0;
+}
+
+.main-create form p input {
+    font-size: 1.6vw;
+    border-radius: 10vw;
+    padding: 0.5vw 1.6vw;
+}
+.main-create form button {
+    width: 22.5vw;
+}
+
+.main-create form button:hover {
+    background: linear-gradient(194deg, #75f579, #a0cea7, #ffca34);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 20vh;
+    }
+    .stickers {
+        cursor: pointer;
+        transition: 0.3s;
+        position: absolute;
+        top: 12.6vh;
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        font-size: 10vh;
+    }
+    .stickers:hover {
+        transform: scale(1.2);
+    }
+    .log_2 {
+        position: absolute;
+        font-size: 6.4vw;
+    }
+    .one {
+        top: 27vh;
+        left: 1vw;
+    }
+    .two {
+        top: 27vh;
+        left: 26.2vw;
+    }
+    .three {
+        top: 27vh;
+        left: 55vw;
+    }
+    .four {
+        top: 20vh;
+        left: 1.2vw;
+    }
+    .block-link {
+        margin-top: 30%;
+        margin-right: 0;
+        width: 100vw;
+        text-align: center;
+        border-radius: 0em;
+        font-size: 6vw;
+        padding: 2vw 0;
+        float: none;
+    }
+    .block-link-one hr {
+        display: none;
+    }
+    .about-main-block {
+        width: 100vw;
+    }
+    #about-prem {
+        padding-top: 3vh;
+        font-size: 8.4vw;
+    }
+    .logotype {
+        font-size: 10vw;
+    }
+    #icon {
+        margin-top: 16.5vh
+    }
+    #hidden-menu {
+        margin-top: 17vh;
+    }
+    .block-about {
+        height: auto;
+        margin: -7vh 0;
+
+    }
+    .block-about-p {
+        height: 12.4vh;
+        border-radius: 20vw;
+        margin-top: 6vh;
+    }
+    .img-about {
+        width: 12vh;
+    }
+    .end-block-about-p {
+        margin-bottom: 15vh;
+    }
+
+    @keyframes slidein {
+      0% {
+        left: 38vw;
+      }
+      25% {
+        left: 45vw;
+      }
+      50% {
+        left: 38vw;
+      }
+      75% {
+        left: 45vw;
+      }
+      100% {
+        left: 38vw;
+      }
+    }
+    .main h1 {
+        font-size: 5vh;
+    }
+    .main-register > form > p > span {
+        display: none;
+    }
+    .enter h1,
+    .main-register h1 {
+        font-size: 4vh;
+    }
+    .enter {
+        width: 87vw;
+        margin-left: 4vw;
+    }
+    .exit h1 {
+        font-size: 5vw;
+    }
+    .profile h1 {
+        font-size: 6.5vw;
+        text-align: center;
+    }
+    .profile p {
+        font-size: 5.5vw;
+        text-align: center;
+    }
+    .profile {
+        margin-top: 15vh;
+    }
+    .block-link-author {
+        width: 100%;
+        font-size: 6.5vw;
+        border-radius: 0vw;
+        margin-left: 0vw;
+        float: none;
+        padding-bottom: 5vh;
+        margin-top: 0vw;
+    }
+    .update_user {
+        width: 100%;
+        font-size: 6.5vw;
+        border-radius: 0vw;
+        margin-left: 0vw;
+        float: none;
+        padding-bottom: 5vh;
+    }
+    .main-create h1 {
+        font-size: 9vw;
+    }
+    .main-create {
+        font-size: 6vw;
+        width: 100vw;
+        margin-left: 0vw;
+    }
+    .main-create form p input {
+        font-size: 7.6vw;
+    }
+    .main-create form button {
+        width: 50vw;
+    }
+
+
+}
+
+

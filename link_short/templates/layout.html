@@ -1,0 +1,56 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'js/slick.min.js' %}">
+  <link rel="icon" href="pictures/title_img.png" type="image/x-icon">
+</head>
+<body>
+
+
+  <header>
+    <div class="header">
+      <span><a href="/" class="logotype {% block one %}{% endblock %}">LinkShort</a></span><span class="stickers stickers1">🪐</span><span class="stickers stickers2">🪐</span>
+      <span><a href="{% url 'about' %}" class="log_2 one {% block two %}{% endblock %}">О нас</a></span>
+      {% if not user.is_authenticated %}
+        <span><a href="{% url 'user' %}" class="log_2 two {% block three %}{% endblock %}">Войти</a></span>
+        <span><a href="{% url 'reg' %}" class="log_2 three {% block four %}{% endblock %}">Регистрация</a></span>
+      {% else %}
+        <span><a href="{% url 'profile' %}" class="log_2 three {% block six %}{% endblock %}">Профиль</a></span>
+        <span><a href="{% url 'add' %}" class="log_2 four {% block five %}{% endblock %}">Создать</a></span>
+        <span><a href="{% url 'exit' %}" class="log_2 two {% block seven %}{% endblock %}">Выйти</a></span>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if messages %}
+    {% for mess in messages %}
+      <div id="mess">
+        <h2>{{ mess }}</h2>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  {% block main %}
+  {% endblock %}
+
+  <footer>
+    <div class="footer">
+      <p>Все права защищены &#169</p>
+    </div>
+  </footer>
+
+
+  <script src="https://kit.fontawesome.com/a67df30022.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="{% static 'js/slick.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

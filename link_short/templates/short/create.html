@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title %}Создание ссылки{% endblock %}
+
+{% block one %}n{% endblock %}
+{% block two %}n{% endblock %}
+{% block three %}n{% endblock %}
+{% block four %}n{% endblock %}
+{% block five %}link{% endblock %}
+{% block six %}n{% endblock %}
+{% block seven %}n{% endblock %}
+
+
+{% block main %}
+<div class="main main-create">
+  <h1 id="">Создание ссылки</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Создать</button>
+  </form>
+</div>
+{% endblock %}
+
+
+
+

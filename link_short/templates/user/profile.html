@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block title %}Профиль{% endblock %}
+
+{% block one %}n{% endblock %}
+{% block two %}n{% endblock %}
+{% block three %}n{% endblock %}
+{% block four %}n{% endblock %}
+{% block five %}n{% endblock %}
+{% block six %}link{% endblock %}
+{% block seven %}n{% endblock %}
+
+{% block main %}
+  <div class="main profile">
+    <h1>Кабинет пользователя @{{ user.username }}</h1>
+    <p>Ваш EMAIL "{{ user.email }}"</p>
+  </div>
+  <div>
+    <div class="update_user">
+      <h3>Обновить данные:</h3>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ updateUserForm.as_p }}
+        <button type="submit">Обновить</button>
+      </form>
+    </div>
+    <div class="block-link-author">
+        <h3>Ваши ссылки:</h3>
+        {% if user.link_set.all %}
+          {% for el in user.link_set.all %}
+          <div class="block-link-one">
+            <h5>▪️ {{ el.title }}</h5>
+            <p>👉🏻 <a class="link-about" target="_blank" href="{{ el.start_link }}">{{ el.late_link }}</a></p>
+          </div>
+          {% endfor %}
+        {% else %}
+          <br><br>
+          <p>Пока тут пусто 😢</p>
+          <p>Попробуй создать <a id="link-profile" href="{% url 'add' %}">ссылку!</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
